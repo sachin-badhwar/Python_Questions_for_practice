@@ -106,3 +106,53 @@ def track_robot(instructions):
   return [total['right']-total['left'],total['up']-total['down']]
 	
 
+Question:
+Find the pairs of the strings and then calculate the count of vovels available in them.
+Solution:
+s='abcd'
+n=len(s)
+sum = 0
+d = []
+a = ''
+while len(s)>0:
+    for i in range(len(s)):
+      a += s[i]
+      d.append(a)
+      if i == len(s)-1:
+        s=s.strip(s[0])
+        a = ''
+         
+#rint(' '.join(d)) 
+e = ' '.join(d) 
+print('e ',e)  
+for i in e:
+  #print('i ',i)
+  if i in ('aeiouAEIOU'):
+    sum += 1  
+print(sum)      
+
+Question:
+You are given a number . You are required to determine the value of the following function:
+
+long long int solve(N)
+{
+    ans=0;
+    for(i=1;i<=N;i++)
+    ans+=(N/i);
+    return ans;
+}
+
+All divisions are integer divisions(i.e. N/i is actually floor(N/i)).
+
+Solution:
+def division(N):
+  ans = 0
+  for i in range(1,N+1):
+    ans += int(N/i)
+  return ans
+
+a = int(input())
+while a>0:
+  print(division(int(input())))
+  a -= 1
+
